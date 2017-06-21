@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     signUp() {
-      firebaseApp.auth().createUserWithEmailAndPassword(this.user, this.password)
+      firebaseApp.auth().createUserWithEmailAndPassword(this.email, this.password)
     }
   }
 }
