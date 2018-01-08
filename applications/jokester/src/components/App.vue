@@ -4,7 +4,7 @@
     <button class="btn btn-primary" @click="initJokes">Add Ten Random Jokes</button>
     <button class="btn btn-primary" @click="addJoke">Add a Joke</button>
     <br>
-    <span v-for="type in types">
+    <span v-for="(type, index) in types" :key="index">
       <input
         type="checkbox"
         :value="type"
@@ -20,7 +20,7 @@
         v-show="checkedTypes.includes(joke.type)"
         :joke="joke"
         :index="index"
-        key="index"
+        :key="index"
       />
     </div>
   </div>
